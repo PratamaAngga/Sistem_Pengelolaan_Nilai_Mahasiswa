@@ -7,9 +7,12 @@ public class Main {
         MataKuliah matkul2 = new MataKuliah("MK002", "Basis Data", 3);
         MataKuliah matkul3 = new MataKuliah("MK003", "Desain Web", 3);
 
-        Mahasiswa mhs1 = new Mahasiswa("2201", "Ali Rahman", "Informatika");
-        Mahasiswa mhs2 = new Mahasiswa("2202", "Budi Santoso", "Informatika");
-        Mahasiswa mhs3 = new Mahasiswa("2203", "Citra Dewi", "Sistem Informasi Bisnis");
+        Mahasiswa dafMahasiswa[] = {
+            new Mahasiswa("22001", "Ali Rahman", "Informatika"),
+            new Mahasiswa("22002", "Budi Santoso", "Informatika"),
+            new Mahasiswa("22003", "Ali Rahman", "Sistem Informasi Bisnis"),
+        };
+
         while (true) {
             System.out.println("===MENU SISTEM AKADEMIK===");
             System.out.println("1. Tampilkan Dartar Mahasiswa");
@@ -23,7 +26,16 @@ public class Main {
 
             if (menu == 1) {
                 System.out.println();
-                
+                System.out.println("\nDaftar Mahasiswa:");
+                System.out.println();
+                String format = "|%-7s | %-15s | %-25s |\n";
+                System.out.printf(format, "NIM", "Nama", "Prodi");
+                System.out.println("|--------|-----------------|---------------------------|");
+
+                for (Mahasiswa mhs : dafMahasiswa) {
+                    mhs.tampil();
+                }
+                System.out.println("--------------------------------------------------------");
             } else if (menu == 2) {
                 System.out.println();
                 System.out.println("Daftar Mata Kuliah:");

@@ -10,9 +10,7 @@ public class Mahasiswa {
     }
 
     void tampil() {
-       String format = "|%-7s | %-15s | %-20s |\n";
-       System.out.printf(format, "NIM", "Nama", "Prodi");
-       System.out.println("|---------|-----------------|----------------------");
+       String format = "|%-7s | %-15s | %-25s |\n";
        System.out.printf(format, nim, nama, prodi); 
     }
 }
