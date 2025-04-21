@@ -3,16 +3,18 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
         Mahasiswa dafMahasiswa[] = {
             new Mahasiswa("22001", "Ali Rahman", "Informatika"),
             new Mahasiswa("22002", "Budi Santoso", "Informatika"),
             new Mahasiswa("22003", "Citra Dewi", "Sistem Informasi Bisnis"),
         };
+
         MataKuliah []matkul = new MataKuliah[3];
         matkul[0] = new MataKuliah("MK001", "Struktur Data", 3);
         matkul[1] = new MataKuliah("MK002", "Basis Data", 3);
         matkul[2] = new MataKuliah("MK003", "Desain Web", 3);
-
+        
         Penilaian daftarNilai[] = {
             new Penilaian(dafMahasiswa[0], matkul[0], 80, 85, 90),
             new Penilaian(dafMahasiswa[0], matkul[1], 60, 75, 70),
@@ -20,6 +22,7 @@ public class Main {
             new Penilaian(dafMahasiswa[2], matkul[1], 85, 90, 95),
             new Penilaian(dafMahasiswa[2], matkul[2], 80, 90, 65),
         };
+
 
         while (true) {
             System.out.println("=== MENU SISTEM AKADEMIK ===");
@@ -31,6 +34,7 @@ public class Main {
             System.out.println("0. Keluar");
             System.out.print("Pilih menu: ");
             int menu = sc.nextInt();
+            sc.nextLine();
 
             if (menu == 1) {
                 System.out.println();
@@ -44,6 +48,7 @@ public class Main {
                     mhs.tampil();
                 }
                 System.out.println("--------------------------------------------------------");
+                System.out.println();
             } else if (menu == 2) {
                 System.out.println();
                 System.out.println("Daftar Mata Kuliah:");
@@ -53,11 +58,12 @@ public class Main {
                 System.out.println();
             } else if (menu == 3) {
                 System.out.println("\n--- Data Penilaian ---");
-                System.out.printf("\"|%-7s | %-15s | %-20s | %-20s | %-5s |\n", "NIM", "Nama", "Prodi", "Mata Kuliah", "Nilai");
-                System.out.println("--------------------------------------------------------");
+                System.out.printf("|%-7s | %-15s | %-25s | %-20s | %-5s |\n", "NIM", "Nama", "Prodi", "Mata Kuliah", "Nilai");
+                System.out.println("---------------------------------------------------------------------------------------");
                 for (Penilaian i : daftarNilai) {
                     i.tampil();
                 };
+            System.out.println();
             } else if (menu == 4) {
                 
             } else if (menu == 5) {
@@ -78,6 +84,7 @@ public class Main {
                 System.out.println();
             } else if (menu == 0) {
                 System.out.println("Terima Kasih!");
+                sc.close();
                 return;
             } else {
                 System.out.println("Masukkan angka dari (0 - 5)");
