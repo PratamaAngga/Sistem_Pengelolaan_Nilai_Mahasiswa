@@ -23,6 +23,7 @@ public class Main {
             new Penilaian(dafMahasiswa[2], matkul[2], 80, 90, 65),
         };
 
+
         while (true) {
             System.out.println("=== MENU SISTEM AKADEMIK ===");
             System.out.println("1. Tampilkan Daftar Mahasiswa");
@@ -56,7 +57,7 @@ public class Main {
                 System.out.println();
             } else if (menu == 3) {
                 System.out.println("\n--- Data Penilaian ---");
-                System.out.printf("\"|%-7s | %-15s | %-20s | %-20s | %-5s |\n", "NIM", "Nama", "Prodi", "Mata Kuliah", "Nilai");
+                System.out.printf("|%-7s | %-15s | %-20s | %-20s | %-5s |\n", "NIM", "Nama", "Prodi", "Mata Kuliah", "Nilai");
                 System.out.println("--------------------------------------------------------");
                 for (Penilaian i : daftarNilai) {
                     i.tampil();
