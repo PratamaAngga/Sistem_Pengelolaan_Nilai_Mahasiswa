@@ -3,15 +3,21 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
         Mahasiswa dafMahasiswa[] = {
             new Mahasiswa("22001", "Ali Rahman", "Informatika"),
             new Mahasiswa("22002", "Budi Santoso", "Informatika"),
             new Mahasiswa("22003", "Ali Rahman", "Sistem Informasi Bisnis"),
         };
+
         MataKuliah []matkul = new MataKuliah[3];
         matkul[0] = new MataKuliah("MK001", "Struktur Data", 3);
         matkul[1] = new MataKuliah("MK002", "Basis Data", 3);
         matkul[2] = new MataKuliah("MK003", "Desain Web", 3);
+
+        Penilaian nilai[] = new Penilaian[10];
+        int jumlahPenilaian = 0;
+
         while (true) {
             System.out.println("=== MENU SISTEM AKADEMIK ===");
             System.out.println("1. Tampilkan Dartar Mahasiswa");
@@ -22,6 +28,7 @@ public class Main {
             System.out.println("0. Keluar");
             System.out.print("Pilih menu: ");
             int menu = sc.nextInt();
+            sc.nextLine();
 
             if (menu == 1) {
                 System.out.println();
