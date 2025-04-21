@@ -6,6 +6,10 @@ public class Main {
         MataKuliah matkul = new MataKuliah("MK001", "Struktur Data", 3);
         MataKuliah matkul2 = new MataKuliah("MK002", "Basis Data", 3);
         MataKuliah matkul3 = new MataKuliah("MK003", "Desain Web", 3);
+
+        Mahasiswa mhs1 = new Mahasiswa("2201", "Ali Rahman", "Informatika");
+        Mahasiswa mhs2 = new Mahasiswa("2202", "Budi Santoso", "Informatika");
+        Mahasiswa mhs3 = new Mahasiswa("2203", "Citra Dewi", "Sistem Informasi Bisnis");
         while (true) {
             System.out.println("===MENU SISTEM AKADEMIK===");
             System.out.println("1. Tampilkan Dartar Mahasiswa");
@@ -18,6 +22,7 @@ public class Main {
             int menu = sc.nextInt();
 
             if (menu == 1) {
+                System.out.println();
                 
             } else if (menu == 2) {
                 System.out.println();
