@@ -65,7 +65,15 @@ public class Main {
                 };
             System.out.println();
             } else if (menu == 4) {
-                
+                Penilaian.urutkanPenilaianBerdasarkanNilai(daftarNilai);
+
+                System.out.println("\n--- Data Penilaian (Setelah Diurutkan Descending) ---");
+                System.out.printf("|%-7s | %-15s | %-20s | %-20s | %-5s |\n", "NIM", "Nama", "Prodi", "Mata Kuliah", "Nilai");
+                System.out.println("----------------------------------------------------------------------------");
+                for (int i = 0; i < daftarNilai.length; i++) {
+                    daftarNilai[i].tampil();
+    }
+                System.out.println();
             } else if (menu == 5) {
                 System.out.println();
                 System.out.print("Masukkan NIM mahasiswa yang dicari: ");
