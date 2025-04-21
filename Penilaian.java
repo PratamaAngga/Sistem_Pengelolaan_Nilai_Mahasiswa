@@ -1,15 +1,15 @@
-public class penilaian {
-    mahasiswa mhs[] = new mahasiswa[5];
-    MataKuliah matkul[] = new MataKuliah[5];
+public class Penilaian {
+    Mahasiswa mhs;
+    MataKuliah matkul;
     
     double nilaiTugas;
     double nilaiUTS;
     double nilaiUAS;
     double nilaiAkhir;
 
-    public penilaian(mahasiswa mahasiswa, MataKuliah matakuliah, double nilaiTugas, double nilaiUTS, double nilaiUAS) {
-        this.mahasiswa = mahasiswa;
-        this.matakuliah = matakuliah;
+    public Penilaian(Mahasiswa mhs, MataKuliah matkul, double nilaiTugas, double nilaiUTS, double nilaiUAS) {
+        this.mhs = mhs;
+        this.matkul = matkul;
         this.nilaiTugas = nilaiTugas;
         this.nilaiUTS = nilaiUTS;
         this.nilaiUAS = nilaiUAS;
