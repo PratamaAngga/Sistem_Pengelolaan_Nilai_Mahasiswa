@@ -3,6 +3,11 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        Mahasiswa dafMahasiswa[] = {
+            new Mahasiswa("22001", "Ali Rahman", "Informatika"),
+            new Mahasiswa("22002", "Budi Santoso", "Informatika"),
+            new Mahasiswa("22003", "Ali Rahman", "Sistem Informasi Bisnis"),
+        };
         MataKuliah []matkul = new MataKuliah[3];
         matkul[0] = new MataKuliah("MK001", "Struktur Data", 3);
         matkul[1] = new MataKuliah("MK002", "Basis Data", 3);
@@ -20,7 +25,16 @@ public class Main {
 
             if (menu == 1) {
                 System.out.println();
-                
+                System.out.println("\nDaftar Mahasiswa:");
+                System.out.println();
+                String format = "|%-7s | %-15s | %-25s |\n";
+                System.out.printf(format, "NIM", "Nama", "Prodi");
+                System.out.println("|--------|-----------------|---------------------------|");
+
+                for (Mahasiswa mhs : dafMahasiswa) {
+                    mhs.tampil();
+                }
+                System.out.println("--------------------------------------------------------");
             } else if (menu == 2) {
                 System.out.println();
                 System.out.println("Daftar Mata Kuliah:");
