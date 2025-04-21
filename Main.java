@@ -46,13 +46,22 @@ public class Main {
                 
             } else if (menu == 4) {
                 
-            } else if (menu ==5 ) {
+            } else if (menu == 5) {
                 System.out.println();
                 System.out.print("Masukkan NIM mahasiswa yang dicari: ");
                 String nim = sc.next();
-                for (int i = 0; i < 3; i++) {
-
+                boolean ditemukan = false;
+                for (int i = 0; i < dafMahasiswa.length; i++) {
+                    if (nim.equalsIgnoreCase(dafMahasiswa[i].nim)) {
+                        System.out.println("Mahasiswa Ditemukan: NIM: " + dafMahasiswa[i].nim + " | Nama: " + dafMahasiswa[i].nama + " | Prodi: " + dafMahasiswa[i].prodi );
+                        ditemukan = true;
+                        break;
+                    }
                 }
+                if (!ditemukan) {
+                    System.out.println("Mahasiswa Dengan NIM " + nim + " Tidak Ditemukan");
+                }
+                System.out.println();
             } else if (menu == 0) {
                 System.out.println("Terima Kasih!");
                 return;
