@@ -48,6 +48,7 @@ public class Main {
                     mhs.tampil();
                 }
                 System.out.println("--------------------------------------------------------");
+                System.out.println();
             } else if (menu == 2) {
                 System.out.println();
                 System.out.println("Daftar Mata Kuliah:");
@@ -57,11 +58,12 @@ public class Main {
                 System.out.println();
             } else if (menu == 3) {
                 System.out.println("\n--- Data Penilaian ---");
-                System.out.printf("|%-7s | %-15s | %-20s | %-20s | %-5s |\n", "NIM", "Nama", "Prodi", "Mata Kuliah", "Nilai");
-                System.out.println("--------------------------------------------------------");
+                System.out.printf("|%-7s | %-15s | %-25s | %-20s | %-5s |\n", "NIM", "Nama", "Prodi", "Mata Kuliah", "Nilai");
+                System.out.println("---------------------------------------------------------------------------------------");
                 for (Penilaian i : daftarNilai) {
                     i.tampil();
                 };
+            System.out.println();
             } else if (menu == 4) {
                 
             } else if (menu == 5) {
@@ -82,6 +84,7 @@ public class Main {
                 System.out.println();
             } else if (menu == 0) {
                 System.out.println("Terima Kasih!");
+                sc.close();
                 return;
             } else {
                 System.out.println("Masukkan angka dari (0 - 5)");

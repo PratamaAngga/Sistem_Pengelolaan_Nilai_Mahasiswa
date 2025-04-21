@@ -22,7 +22,7 @@ public class Penilaian {
     }
 
     void tampil() {
-        System.out.printf("|%-7s | %-15s | %-20s | %-20s | %-5s |\n", 
+        System.out.printf("|%-7s | %-15s | %-25s | %-20s | %-5s |\n", 
         mhs.nim, mhs.nama, mhs.prodi, matkul.namaMK, nilaiAkhir);
     }
 
