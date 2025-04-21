@@ -16,7 +16,20 @@ public class Penilaian {
         this.nilaiAkhir = 0; 
     }
 
-    public void hitungNilaiAkhir() {
+    void hitungNilaiAkhir() {
         this.nilaiAkhir = (0.3 * this.nilaiTugas) + (0.35 * this.nilaiUTS) + (0.35 * this.nilaiUAS);
+    }
+
+    void tampil() {
+        System.out.printf("| %-7s | %-15s | %-20s | %-20s | %5.2f |\n", 
+        mhs.nim, mhs.nama, mhs.prodi, matkul.namaMK, nilaiAkhir);
+    }
+
+    public String getNim() {
+        return mhs.nim;
+    }
+
+    public double getNilaiAkhir() {
+        return nilaiAkhir;
     }
 }
