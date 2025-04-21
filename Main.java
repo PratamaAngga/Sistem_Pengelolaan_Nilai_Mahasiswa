@@ -6,15 +6,24 @@ public class Main {
         Mahasiswa dafMahasiswa[] = {
             new Mahasiswa("22001", "Ali Rahman", "Informatika"),
             new Mahasiswa("22002", "Budi Santoso", "Informatika"),
-            new Mahasiswa("22003", "Ali Rahman", "Sistem Informasi Bisnis"),
+            new Mahasiswa("22003", "Citra Dewi", "Sistem Informasi Bisnis"),
         };
         MataKuliah []matkul = new MataKuliah[3];
         matkul[0] = new MataKuliah("MK001", "Struktur Data", 3);
         matkul[1] = new MataKuliah("MK002", "Basis Data", 3);
         matkul[2] = new MataKuliah("MK003", "Desain Web", 3);
+
+        Penilaian daftarNilai[] = {
+            new Penilaian(dafMahasiswa[0], matkul[0], 80, 85, 90),
+            new Penilaian(dafMahasiswa[0], matkul[1], 60, 75, 70),
+            new Penilaian(dafMahasiswa[1], matkul[0], 75, 70, 80),
+            new Penilaian(dafMahasiswa[2], matkul[1], 85, 90, 95),
+            new Penilaian(dafMahasiswa[2], matkul[2], 80, 90, 65),
+        };
+
         while (true) {
             System.out.println("=== MENU SISTEM AKADEMIK ===");
-            System.out.println("1. Tampilkan Dartar Mahasiswa");
+            System.out.println("1. Tampilkan Daftar Mahasiswa");
             System.out.println("2. Tampilkan Daftar Mata Kuliah");
             System.out.println("3. Tampilkan Data Penilaian");
             System.out.println("4. Urutkan Mahasiswa Berdasarkan Nilai Akhir");
@@ -43,7 +52,12 @@ public class Main {
                 }
                 System.out.println();
             } else if (menu == 3) {
-                
+                System.out.println("\n--- Data Penilaian ---");
+                System.out.printf("\"|%-7s | %-15s | %-20s | %-20s | %-5s |\n", "NIM", "Nama", "Prodi", "Mata Kuliah", "Nilai");
+                System.out.println("--------------------------------------------------------");
+                for (Penilaian i : daftarNilai) {
+                    i.tampil();
+                };
             } else if (menu == 4) {
                 
             } else if (menu == 5) {
