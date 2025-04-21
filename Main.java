@@ -19,6 +19,7 @@ public class Main {
             int menu = sc.nextInt();
 
             if (menu == 1) {
+                System.out.println();
                 
             } else if (menu == 2) {
                 System.out.println();
