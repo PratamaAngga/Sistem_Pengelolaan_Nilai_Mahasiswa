@@ -18,7 +18,7 @@ public class Penilaian {
     }
 
     void hitungNilaiAkhir() {
-        this.nilaiAkhir = (0.3 * this.nilaiTugas) + (0.3 * this.nilaiUTS) + (0.4 * this.nilaiUAS);
+        this.nilaiAkhir = (float) (0.3 * this.nilaiTugas) + (0.3 * this.nilaiUTS) + (0.4 * this.nilaiUAS);
     }
 
     void tampil() {
