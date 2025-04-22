@@ -21,7 +21,7 @@ public class Main {
             new Penilaian(dafMahasiswa[1], matkul[0], 75, 70, 80),
             new Penilaian(dafMahasiswa[2], matkul[1], 85, 90, 95),
             new Penilaian(dafMahasiswa[2], matkul[2], 80, 90, 65),
-        };
+        }; //data isi variabel array
 
 
         while (true) {
@@ -56,7 +56,7 @@ public class Main {
                     matkul[i].tampilMataKuliah();
                 }
                 System.out.println();
-            } else if (menu == 3) {
+            } else if (menu == 3) { //data dipanggil dari penilaian
                 System.out.println("\n--- Data Penilaian ---");
                 System.out.printf("|%-7s | %-15s | %-25s | %-20s | %-5s |\n", "NIM", "Nama", "Prodi", "Mata Kuliah", "Nilai");
                 System.out.println("---------------------------------------------------------------------------------------");
@@ -64,7 +64,7 @@ public class Main {
                     i.tampil();
                 };
             System.out.println();
-            } else if (menu == 4) {
+            } else if (menu == 4) { //bubble sorting
                 Penilaian.urutkanPenilaianBerdasarkanNilai(daftarNilai);
 
                 System.out.println("\n--- Data Penilaian (Setelah Diurutkan Descending) ---");
