@@ -6,7 +6,7 @@ public class Penilaian {
     double nilaiUTS;
     double nilaiUAS;
     double nilaiAkhir;
-
+    //variabel
     public Penilaian(Mahasiswa mhs, MataKuliah matkul, double nilaiTugas, double nilaiUTS, double nilaiUAS) {
         this.mhs = mhs;
         this.matkul = matkul;
@@ -14,8 +14,8 @@ public class Penilaian {
         this.nilaiUTS = nilaiUTS;
         this.nilaiUAS = nilaiUAS;
         this.nilaiAkhir = 0; 
-        hitungNilaiAkhir();
-    }
+        hitungNilaiAkhir(); //di hitung langsung sebagai value nilai akhir
+    }   //konstruktor
 
     void hitungNilaiAkhir() {
         this.nilaiAkhir = (float) (0.3 * this.nilaiTugas) + (0.3 * this.nilaiUTS) + (0.4 * this.nilaiUAS);
@@ -34,7 +34,7 @@ public class Penilaian {
             for (int j = 0; j < data.length -i -1;j++) {
                 if (data[j].getNilaiAkhir() < data[j + 1].getNilaiAkhir()) {
                     Penilaian temp = data[j]; data[j] = data[j + 1]; data[j + 1] = temp;
-                }
+                } //sorting dari menu 4 dan mengurutkan secara descending
             }
         }         
         }
